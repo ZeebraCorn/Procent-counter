@@ -13,7 +13,7 @@ body {
 }
 
 .calculator__container {
-    width: 700px;
+    max-width: 800px;
     height: 400px;
     background-color: #f1f1f1;
     box-shadow: 1px 1px 10px 1px #d5d5d5; 
@@ -28,6 +28,7 @@ h1 {
     font-weight: 400;
     font-size: 4.398rem;
     margin-bottom: 1.5rem;
+    padding: 0 40px;
 }
 
 h2 {
@@ -60,3 +61,45 @@ input[type=text] {
     text-align: center; 
     border: 1px solid rgb(174, 174, 174); 
 } 
+
+/* RESPONSIVE DESIGN */
+
+/* 800 PX */
+@media screen and (max-width: 800px) {
+
+    .calculator__container {
+        margin: 10rem 1rem 0;
+    }
+    
+    .calculator__container h1 {
+        font-size: clamp(1.5rem, -0.8711rem + 10.5382vw, 4.398rem);
+        padding: 0 20px;
+    }
+
+    .calculator__container h2 {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    input[type=number],
+    input[type=text] {
+        width: 75px;
+        padding: 3px;
+    }
+
+    button {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+/* 630 PX */
+
+@media screen and (max-width: 630px) {
+    
+    .calculator__container {
+        height: 250px;
+    }
+}
